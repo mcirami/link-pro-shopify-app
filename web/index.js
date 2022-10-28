@@ -15,7 +15,7 @@ import { AppInstallations } from "./app_installations.js";
 
 const USE_ONLINE_TOKENS = false;
 
-const PORT = parseInt(process.env.BACKEND_PORT || process.env.PORT, 10);
+const PORT = 8081; //parseInt(process.env.BACKEND_PORT || process.env.PORT, 10);
 
 // TODO: There should be provided by env vars
 const DEV_INDEX_PATH = `${process.cwd()}/frontend/`;
@@ -24,11 +24,11 @@ const PROD_INDEX_PATH = `${process.cwd()}/frontend/dist/`;
 const DB_PATH = `${process.cwd()}/database.sqlite`;
 
 Shopify.Context.initialize({
-  API_KEY: process.env.SHOPIFY_API_KEY,
-  API_SECRET_KEY: process.env.SHOPIFY_API_SECRET,
-  SCOPES: process.env.SCOPES.split(","),
-  HOST_NAME: process.env.HOST.replace(/https?:\/\//, ""),
-  HOST_SCHEME: process.env.HOST.split("://")[0],
+  API_KEY: "0c0c550ed3f1008d7e62c6b2aff0e206",
+  API_SECRET_KEY: "9c586086992b2f522033b6d6be879313",
+  SCOPES: "read_products",
+  HOST_NAME: "app.link.pro",
+  HOST_SCHEME: "https",
   API_VERSION: LATEST_API_VERSION,
   IS_EMBEDDED_APP: true,
   // This should be replaced with your preferred storage strategy
